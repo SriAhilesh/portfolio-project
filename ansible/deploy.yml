@@ -1,0 +1,9 @@
+- name: Deploy Full-Stack App and Monitoring
+  hosts: localhost
+  become: true
+  roles:
+    - mysql
+    - backend
+    - frontend
+    - monitoring
+

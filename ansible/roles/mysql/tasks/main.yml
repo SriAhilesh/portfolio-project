@@ -1,0 +1,14 @@
+- name: Create MySQL container
+  community.docker.docker_container:
+    name: mysql
+    image: mysql:8
+    state: started
+    restart_policy: always
+    env:
+      MYSQL_ROOT_PASSWORD: ahilsakti@1218
+      MYSQL_DATABASE: portfolio_db
+    published_ports:
+      - "3307:3306"
+    networks:
+      - name: portfolio-network
+

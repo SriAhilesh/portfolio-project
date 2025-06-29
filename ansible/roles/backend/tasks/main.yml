@@ -1,0 +1,28 @@
+- name: Create docker network
+  community.docker.docker_network:
+    name: portfolio-network
+    state: present
+
+- name: Stop and remove old backend container
+  community.docker.docker_container:
+    name: backend
+    state: absent
+
+- name: Build backend Docker image
+  community.docker.docker_image:
+    name: portfolio-backend
+    source: build
+    build:
+      path: /home/sri/Downloads/portfolio-backend
+
+- name: Run backend container
+  community.docker.docker_container:
+    name: backend
+    image: portfolio-backend:latest
+    state: started
+    restart_policy: always
+    published_ports:
+      - "8082:8082"
+    networks:
+      - name: portfolio-network
+
