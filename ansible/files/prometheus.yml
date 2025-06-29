@@ -1,9 +1,8 @@
-scrape_configs:
-  - job_name: 'backend'
-    static_configs:
-      - targets: ['172.17.0.1:8082']
+- job_name: 'backend'
+  static_configs:
+    - targets: ['backend:8082']   # Use container name
 
-  - job_name: 'frontend'
-    static_configs:
-      - targets: ['172.17.0.1:3001']
+- job_name: 'frontend'
+  static_configs:
+    - targets: ['frontend:3001']  # Use container name
 
