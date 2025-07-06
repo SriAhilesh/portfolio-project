@@ -1,70 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 💡 Features
 
-In the project directory, you can run:
+- 🔧 **Spring Boot** backend connected to **MySQL**
+- ⚛️ **React** frontend with professional portfolio UI
+- 🐳 Containerized using **Docker**
+- 🤖 Automated builds with **Jenkins**
+- 🚀 Deployment using **Ansible**
+- 📊 Real-time monitoring using **Prometheus** & **Grafana**
+- 🔁 Fully functional **CI/CD pipeline**
+- ☁️ Code versioned and deployed from **GitHub**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Layer           | Technology                |
+|----------------|---------------------------|
+| Frontend       | React, Nginx              |
+| Backend        | Spring Boot, Java         |
+| Database       | MySQL                     |
+| DevOps Tools   | Jenkins, Docker, Ansible  |
+| Monitoring     | Prometheus, Grafana       |
+| Version Control| Git & GitHub              |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔁 CI/CD Pipeline
 
-### `npm run build`
+1. **Code pushed to GitHub**
+2. **Jenkins** triggers build
+3. Jenkins runs tests & builds Docker images
+4. Jenkins executes **Ansible** playbooks
+5. Docker containers are deployed (frontend, backend, MySQL)
+6. **Prometheus** scrapes metrics, **Grafana** visualizes system health
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Deployment Steps (Summary)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> For full deployment documentation, refer to [DEPLOYMENT.md](./DEPLOYMENT.md)
 
-### `npm run eject`
+1. **Push code to GitHub**
+2. **Build Docker images** for backend & frontend
+3. **Run Ansible playbook** to deploy containers on the server
+4. **Jenkinsfile** automates the entire CI/CD process
+5. **Prometheus + Grafana** provide live system metrics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Folder Breakdown
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `backend/` – Java Spring Boot backend (ProjectController, ProjectRepository, Project model)
+- `frontend/` – React frontend (components, routes, portfolio UI)
+- `ansible/` – Roles for backend, frontend, MySQL, monitoring setup
+- `Jenkinsfile` – Declarative pipeline to build, test, deploy the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📊 Monitoring Dashboard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Prometheus scrapes `/metrics` from containers and Grafana displays:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- CPU & memory usage
+- Container uptime
+- API response time
+- System health alerts
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ✅ Prerequisites
 
-### Analyzing the Bundle Size
+- Docker & Docker Compose
+- Jenkins installed and configured
+- Ansible installed on host
+- Git installed
+- Java, Node.js & Maven (for local development)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Backend: `mvn clean test` (JUnit)
+- Frontend: `npm run test` (Jest)
+- CI pipeline automatically runs tests
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## 🙌 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Sri Ahilesh**  
+GitHub: [@SriAhilesh](https://github.com/SriAhilesh)  
+LinkedIn: [in/sri-ahilesh-059240331](https://linkedin.com/in/sri-ahilesh-059240331)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
