@@ -40,7 +40,6 @@
 
 ## 🚀 Deployment Steps (Summary)
 
-> For full deployment documentation, refer to [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 1. **Push code to GitHub**
 2. **Build Docker images** for backend & frontend
