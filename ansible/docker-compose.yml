@@ -15,7 +15,7 @@ services:
 
   backend:
     build:
-      context: ../portfolio-backend
+      context: ../backend
     container_name: backend
     ports:
       - "8082:8082"
@@ -28,7 +28,7 @@ services:
 
   frontend:
     build:
-      context: ../portfolio-frontend
+      context: ../frontend
     container_name: frontend
     ports:
       - "3000:80"
