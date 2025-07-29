@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/projects")
-@CrossOrigin(origins = "*") // allow frontend to access
+@CrossOrigin(origins = "*")
 public class ProjectController {
 
     @Autowired
@@ -25,5 +25,16 @@ public class ProjectController {
     @PostMapping
     public Project createProject(@RequestBody Project project) {
         return projectRepository.save(project);
+    }
+
+    // DELETE a project by ID
+    @DeleteMapping("/{id}")
+    public String deleteProject(@PathVariable Long id) {
+        if (projectRepository.existsById(id)) {
+            projectRepository.deleteById(id);
+            return "Project deleted successfully";
+        } else {
+            return "Project not found";
+        }
     }
 }
